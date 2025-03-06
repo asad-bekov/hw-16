@@ -39,8 +39,6 @@
 
 **Docker-Compose файл**
 
-Для примера используем MySQL. Создадим файл `docker-compose.yml` для поднятия двух контейнеров – мастер и слейв:
-
 ```yaml
 version: '3.1'
 
@@ -122,8 +120,8 @@ CHANGE MASTER TO
   MASTER_HOST='mysql-master',
   MASTER_USER='repl',
   MASTER_PASSWORD='repl_password',
-  MASTER_LOG_FILE='mysql-bin.000001',
-  MASTER_LOG_POS=107;
+  MASTER_LOG_FILE='mysql-bin.000003',
+  MASTER_LOG_POS=994;
 START SLAVE;
 ```
 
